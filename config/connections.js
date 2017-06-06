@@ -56,14 +56,23 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
+  toothistMongo: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    user: 'username', //optional
-    password: 'password', //optional
-    database: 'your_mongo_db_name_here' //optional
+    host: 'ec2-13-58-189-168.us-east-2.compute.amazonaws.com',
+    port: 27017,//270170,
+    user: 'tooth',
+    password: 'tooth',
+    database: 'admin'
   }//,
+
+    /*toothistMongo: {
+        adapter: 'sails-mongo',
+        host: 'localhost',
+        port: 27017,
+        user: 'username', //optional
+        password: 'password', //optional
+        database: 'your_mongo_db_name_here' //optional
+    }*/
 
   /***************************************************************************
   *                                                                          *
