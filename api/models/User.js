@@ -9,16 +9,21 @@ module.exports = {
 
     attributes: {
 
-        first_name: {
+        name: {
             type: 'string'
         },
         last_name: {
             type: 'string'
         },
-        personal_id: {
+        email: {
             type: 'string'
+        },
+        id: {
+            type: 'number'
+        },
+        dateOfBirth: {
+            type: 'Date'
         }
-
 
     }
 };

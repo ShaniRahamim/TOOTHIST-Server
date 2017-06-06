@@ -7,8 +7,19 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+    attributes: {
+        clientId: {
+            type: 'number'
+        },
+        doctorId: {
+            type: 'number'
+        },
+        anamnesis: {
+            type: 'string'
+        },
+        reasonOfTreatment: {
+            type: 'string'
+        }
+    }
 };
 
