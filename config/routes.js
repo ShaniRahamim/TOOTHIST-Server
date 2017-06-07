@@ -34,7 +34,15 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  }//,
+
+/*  '/user' :{
+      cors: {
+          origin: 'shani',
+          headers: 'Content-Type, Authorization'
+      },
+      methods:"POST"
+  }*/
 
   /***************************************************************************
   *                                                                          *
