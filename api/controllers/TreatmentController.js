@@ -5,9 +5,10 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
+/*
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 // Imports the Google Cloud client library
 const Speech = require('@google-cloud/speech');
@@ -23,6 +24,7 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
+*/
 
 module.exports = {
     voiceToText: voiceToText
@@ -31,7 +33,8 @@ module.exports = {
 
 function voiceToText(req, response) {
     var soundBinaryStr = req.body;
-    try {
+
+    /*try {
         // todo: predfom a check here.
         var textToReturn = "howdeyyy!";
         // our Google Cloud Platform project ID
@@ -46,7 +49,7 @@ function voiceToText(req, response) {
 
         // Reads a local audio file and converts it to base64
         // const file = fs.readFileSync(req.body);
-       /* let a = req.body;*/
+       /!* let a = req.body;*!/
 
         console.log("HYYY" + req.body);
 
@@ -99,8 +102,8 @@ function voiceToText(req, response) {
     }
     catch (ex) {
         response.send("shit!" + JSON.stringify(ex));
-    }
+    }*/
 
-
-    //response.send(textToReturn);
+    var textToReturn = "howdey!";
+    response.send(textToReturn);
 }
