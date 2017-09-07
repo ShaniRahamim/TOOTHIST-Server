@@ -35,7 +35,7 @@ module.exports.routes = {
     '/': {
         view: 'homepage'
     },//,
-    'POST /treatment//text-to-speech' : 'TreatmentController.voiceToText'
+    'POST /treatment/text-to-speech' : 'TreatmentController.voiceToText'
 
     /*  '/user' :{
      cors: {
