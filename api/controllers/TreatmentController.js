@@ -10,6 +10,6 @@ module.exports = {
 	
 };
 
-function voiceToText(request){
-return "hodwyyy!"
+function voiceToText(request, response){
+    response.send("hodwyyy!");
 }
