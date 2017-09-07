@@ -6,6 +6,10 @@
  */
 
 module.exports = {
+    voiceToText : voiceToText
 	
 };
 
+function voiceToText(request){
+return "hodwyyy!"
+}
