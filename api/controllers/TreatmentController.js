@@ -48,6 +48,8 @@ function voiceToText(req, response){
         // const file = fs.readFileSync(req.body);
         let a = req.body;
 
+        console.log("HYYY" + req.body);
+
         // let decodedWav = wav.decode(req.body.wavFile);
         let decodedWav = wav.decode(req.body);
 
