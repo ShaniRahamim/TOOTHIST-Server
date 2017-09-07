@@ -14,7 +14,7 @@ const Speech = require('@google-cloud/speech');
 const fs = require('fs');
 const wav = require('node-wav');
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -25,11 +25,11 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 
 module.exports = {
-    voiceToText : voiceToText
-	
+    voiceToText: voiceToText
+
 };
 
-function voiceToText(req, response){
+function voiceToText(req, response) {
     var soundBinaryStr = req.body;
     try {
         // todo: predfom a check here.
@@ -46,12 +46,12 @@ function voiceToText(req, response){
 
         // Reads a local audio file and converts it to base64
         // const file = fs.readFileSync(req.body);
-        let a = req.body;
+       /* let a = req.body;*/
 
         console.log("HYYY" + req.body);
 
         // let decodedWav = wav.decode(req.body.wavFile);
-        let decodedWav = wav.decode(req.body);
+        var decodedWav = wav.decode(req.body);
 
         console.log("hi");
         var newChannelData = decodedWav.channelData; //we will change this if we find it is in stereo
@@ -83,25 +83,24 @@ function voiceToText(req, response){
 
         // Detects speech in the audio file
         speechClient.recognize(request)
-            .then((results) = > {
-            const transcription = results[0].results[0].alternatives[0].transcript;
-        response.send(transcription);
-        console.log(transcription);
-        //console.log(`Transcription: ${transcription.split("").reverse().join("")}`);
-    })
-    .
-        catch((err) = > {
-            console.error('ERROR:', err);
-    })
+            .then(function (results) {
+                const transcription = results[0].results[0].alternatives[0].transcript;
+                response.send(transcription);
+                console.log(transcription);
+                //console.log(`Transcription: ${transcription.split("").reverse().join("")}`);
+            })
+            .catch(function (err) {
+                console.error('ERROR:', err);
+            })
         ;
         // [END speech_quickstart]
 
-       // response.send('Hello POST');
+        // response.send('Hello POST');
     }
-    catch (ex){
+    catch (ex) {
         response.send("shit!" + JSON.stringify(ex));
     }
 
-    
+
     //response.send(textToReturn);
 }
