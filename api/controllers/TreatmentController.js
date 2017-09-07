@@ -11,5 +11,10 @@ module.exports = {
 };
 
 function voiceToText(request, response){
-    response.send("hodwyyy!");
+    var soundBinaryStr = request.body;
+
+    // todo: predfom a check here.
+    var textToReturn = "howdeyyy!";
+
+    response.send(textToReturn);
 }
