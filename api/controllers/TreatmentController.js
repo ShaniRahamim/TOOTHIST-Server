@@ -51,13 +51,13 @@ function voiceToText(req, response) {
         // const file = fs.readFileSync(req.body);
        /* let a = req.body;*/
 
-        console.log("HYYY" + JSON.stringify(req.body));
+        console.log("HYYY" + JSON.stringify(req.body,sound_binary));
 
         // let decodedWav = wav.decode(req.body.wavFile);
         //var decodedWav = wav.decode(req.body.sound_binary);
 
         var buffer = new Buffer(req.body.sound_binary, "binary");
-
+        console.log("managed to take it from body");
         var decodedWav = wav.decode(buffer);
 
         console.log("managed decoding! ");
