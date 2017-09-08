@@ -58,6 +58,7 @@ function voiceToText(req, response) {
 
         var buffer = new Buffer(req.body.sound_binary, "binary");
         console.log("managed to take it from body");
+        console.log(JSON.stringify(buffer));
         var decodedWav = wav.decode(buffer);
 
         console.log("managed decoding! ");
