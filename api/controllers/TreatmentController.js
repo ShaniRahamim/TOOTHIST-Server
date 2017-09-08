@@ -34,7 +34,7 @@ module.exports = {
 function voiceToText(req, response) {
     var soundBinaryStr = req.body;
 
-    /*try {
+    try {
         // todo: predfom a check here.
         var textToReturn = "howdeyyy!";
         // our Google Cloud Platform project ID
@@ -49,7 +49,7 @@ function voiceToText(req, response) {
 
         // Reads a local audio file and converts it to base64
         // const file = fs.readFileSync(req.body);
-       /!* let a = req.body;*!/
+       /* let a = req.body;*/
 
         console.log("HYYY" + req.body);
 
@@ -102,7 +102,7 @@ function voiceToText(req, response) {
     }
     catch (ex) {
         response.send("shit!" + JSON.stringify(ex));
-    }*/
+    }
 
     var textToReturn = "howdey!";
     response.send(textToReturn);
