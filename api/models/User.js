@@ -21,7 +21,7 @@ module.exports = {
         password: {
             type: 'string'
         },
-        id: {
+        _id: {
             type: 'number'
         },
         dateOfBirth: {

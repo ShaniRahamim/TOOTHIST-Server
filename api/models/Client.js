@@ -24,9 +24,22 @@ module.exports = {
             type: 'Date'
         },
         myDoctorId: {
-            type: 'number'
+            type: 'string'
         }
+        /*,
+         treatments: {
+         collection: 'treatment',
+         via: 'clientId'
+         }*/
 
     }
+    /*,
+
+     beforeDestroy: function(criteria, cb){
+     //	Treatment.delete({clientId: criteria}).exec(function(err){
+     console.log('criteria');
+     console.log(criteria);
+     cb();
+     });*/
 };
 

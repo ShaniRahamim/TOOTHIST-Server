@@ -8,11 +8,16 @@
 module.exports = {
 
     attributes: {
+        _id:	  {
+            type: 'string',
+            primaryKey: true
+        },
         clientId: {
-            type: 'number'
+            type: 'string'
+//              model: 'client'
         },
         doctorId: {
-            type: 'number'
+            type: 'string'
         },
         anamnesis: {
             type: 'string'
