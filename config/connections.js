@@ -60,8 +60,8 @@ module.exports.connections = {
     adapter: 'sails-mongo',
     host: 'ec2-13-58-189-168.us-east-2.compute.amazonaws.com',
     port: 27017,//270170,
-    user: 'tooth',
-    password: 'tooth',
+   // user: 'tooth',
+    //password: 'tooth',
     database: 'admin'
   }//,
 
