@@ -105,5 +105,5 @@ function voiceToText(req, response) {
     }
 
     var textToReturn = "howdey!";
-    response.send(textToReturn);
+    //response.send(textToReturn);
 }
