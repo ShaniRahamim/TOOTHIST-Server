@@ -5,7 +5,6 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-/*
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -24,7 +23,6 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
-*/
 
 module.exports = {
     voiceToText: voiceToText
@@ -36,6 +34,7 @@ function voiceToText(req, response) {
 
     try {
         // todo: predfom a check here.
+        console.log("HYYY");
         var textToReturn = "howdeyyy!";
         // our Google Cloud Platform project ID
         const projectId = 'atomic-voice-176415';
@@ -45,6 +44,7 @@ function voiceToText(req, response) {
             projectId: projectId
         });
 
+        console.log("init apeech");
         // The name of the audio file to transcribe
 
         // Reads a local audio file and converts it to base64
@@ -101,6 +101,7 @@ function voiceToText(req, response) {
         // response.send('Hello POST');
     }
     catch (ex) {
+        console.log("error : "+ JSON.stringify(ex));
         response.send("shit!" + JSON.stringify(ex));
     }
 
