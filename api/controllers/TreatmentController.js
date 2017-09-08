@@ -54,9 +54,13 @@ function voiceToText(req, response) {
         console.log("HYYY" + JSON.stringify(req.body));
 
         // let decodedWav = wav.decode(req.body.wavFile);
-        var decodedWav = wav.decode(req.body);
+        //var decodedWav = wav.decode(req.body.sound_binary);
 
-        console.log("hi");
+        var buffer = new Buffer(req.body.sound_binary, "binary");
+
+        var decodedWav = wav.decode(buffer);
+
+        console.log("managed decoding! ");
         var newChannelData = decodedWav.channelData; //we will change this if we find it is in stereo
         if (decodedWav.channelData.length > 1) { //if there is more than one channel, this is a stereo audio file
             newChannelData = []; //wipe newChannelData clean
